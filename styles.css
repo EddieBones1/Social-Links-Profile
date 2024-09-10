@@ -1,0 +1,119 @@
+/* importng the "Inter" font-family from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Setting my global variables */
+:root {
+  /*colors */
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+  --font-size: 0.875em; /* 0.875em = 14px (only for paragraph sections) */
+  --font-weight-1: 400;
+  --font-weight-2: 600;
+  --font-weight-3: 700;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Grey-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--Grey-800);
+  color: var(--White);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1em;
+  width: 23.975em;
+  height: 38.3125em;
+
+}
+img {
+  border-radius: 2.5em;
+  display:inline-flex;
+  position: absolute;
+  top: 208px;
+}
+.user-info {
+  position: absolute;
+  top: 312px;
+}
+.user-name {
+  font-weight: var(--font-weight-3);
+  margin-bottom:4px;
+}
+.Location {
+  color: var(--Green);
+  font-weight: var(--font-weight-2);
+  font-size: var(--font-size);
+}
+.description {
+  font-size: var(--font-weight-3);
+  color: var(--White);
+  position: absolute;
+  top: 394.5px;
+}
+.social {
+  background-color: var(--Grey-700);
+  text-decoration: none;
+  color: var(--White);
+  font-weight: var(--font-weight-3);
+  border: none;
+  border-radius: 0.5em;
+  padding: 10px;
+}
+.social-media {
+  display: grid;
+  margin-bottom: -236px;
+  gap: 1.5em;
+  width: 304.5px;
+}
+.attribution {
+  color: var(--White);
+}
+
+.social:hover {
+  background-color: var(--Green);
+  color: var(--Grey-800);
+}
+
+@media screen and (width >=1440px) {
+  img {
+    top: 256px;
+  }
+  .user-info {
+    top: 366px;
+  }
+  .description {
+    top: 458.5px;
+  }
+}
+
+@media screen and (width =1440px) {
+  img {
+    top: 256px;
+  }
+  .user-info {
+    top: 366px;
+  }
+  .description {
+    top: 458.5px;
+  }
+}
