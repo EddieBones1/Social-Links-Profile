@@ -14,7 +14,6 @@
   --font-weight-2: 600;
   --font-weight-3: 700;
 }
-
 /* Reset */
 
 * {
@@ -22,7 +21,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+body:not(.attribution) {
   background-color: var(--Grey-900);
   display: flex;
   flex-direction: column;
@@ -36,28 +35,24 @@ body {
   background-color: var(--Grey-800);
   color: var(--White);
   display: flex;
+  position: relative;
   text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 1em;
   width: 23.975em;
-  height: 38.3125em;
-
+  height: 28em; /* The height of the gray card container */
 }
+
 img {
   border-radius: 2.5em;
-  display:inline-flex;
-  position: absolute;
-  top: 208px;
+  margin: -0.5625em 0 0.5em 0;
 }
-.user-info {
-  position: absolute;
-  top: 312px;
-}
+
 .user-name {
   font-weight: var(--font-weight-3);
-  margin-bottom:4px;
+  margin-bottom: 0.25em;
 }
 .Location {
   color: var(--Green);
@@ -67,8 +62,12 @@ img {
 .description {
   font-size: var(--font-weight-3);
   color: var(--White);
+  margin-top: 2.125em;
+}
+.image-description {
+  text-align: center;
   position: absolute;
-  top: 394.5px;
+  top: 2.41em;
 }
 .social {
   background-color: var(--Grey-700);
@@ -77,43 +76,43 @@ img {
   font-weight: var(--font-weight-3);
   border: none;
   border-radius: 0.5em;
-  padding: 10px;
+  padding: 0.625em;
 }
 .social-media {
   display: grid;
-  margin-bottom: -236px;
+  margin-bottom: -14.75em;
   gap: 1.5em;
-  width: 304.5px;
+  width: 19.03em;
 }
 .attribution {
   color: var(--White);
+  margin-top: 1em;
+  font-size: 0.75em;
+  text-align: center;
 }
 
+.attribution a {
+  color: var(--white);
+}
+
+.attribution a:hover {
+  color: var(--Green);
+}
 .social:hover {
   background-color: var(--Green);
   color: var(--Grey-800);
 }
 
-@media screen and (width >=1440px) {
-  img {
-    top: 256px;
-  }
-  .user-info {
-    top: 366px;
+@media screen and (max-width: 23.4375em /* 375px for mobile */) {
+  .container {
+    margin: 0 2.75em;
+    width: 326.7px;
   }
   .description {
-    top: 458.5px;
+    margin-top: 2.125em;
+    font-size: 0.875em;
   }
-}
-
-@media screen and (width =1440px) {
-  img {
-    top: 256px;
-  }
-  .user-info {
-    top: 366px;
-  }
-  .description {
-    top: 458.5px;
+  .attribution {
+    font-size: 0.625em;
   }
 }
